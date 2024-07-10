@@ -58,7 +58,7 @@ library
     import:           warnings
 
     -- Modules exported by the library.
-    exposed-modules:  MyLib
+    exposed-modules:  Befunge93
 
     -- Modules included in this library but not exported.
     -- other-modules:
@@ -67,7 +67,8 @@ library
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.17.2.1
+    build-depends:    base ^>=4.17.2.1,
+                      random ^>=1.2.1.2
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -124,4 +125,6 @@ test-suite befunge93-test
     -- Test dependencies.
     build-depends:
         base ^>=4.17.2.1,
-        befunge93
+        befunge93,
+        hspec ^>=2.11.9,
+        random ^>=1.2.1.2
