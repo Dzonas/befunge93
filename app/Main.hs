@@ -1,8 +1,10 @@
 module Main where
 
-import MyLib qualified (someFunc)
+import Befunge93 (interpret)
+import System.Random (newStdGen)
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
-  MyLib.someFunc
+  g <- newStdGen
+  contents <- getContents
+  putStrLn $ interpret g contents
