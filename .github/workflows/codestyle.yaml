@@ -1,0 +1,8 @@
+name: Codestyle
+on: [push]
+jobs:
+  ormolu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: haskell-actions/run-ormolu@v16
